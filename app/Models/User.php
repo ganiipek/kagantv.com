@@ -61,6 +61,11 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
 
+    public function teams()
+    {
+        return $this->hasMany(Team::class);
+    }
+
     public function teamUsers()
     {
         return $this->hasMany(TeamUser::class);
@@ -69,11 +74,30 @@ class User extends Authenticatable
     public function notifications()
     {
         return $this->hasMany(Notification::class);
-
     }
 
     public function teamInvatitions()
     {
         return $this->hasMany(TeamInvitation::class);
+    }
+
+    public function tournaments()
+    {
+        return $this->hasMany(Tournament::class);
+    }
+
+    public function tournamentParticipants()
+    {
+        return $this->hasMany(TournamentParticipant::class);
+    }
+
+    public function giveawayWins()
+    {
+        return $this->hasMany(TournamentParticipant::class,"winner_id");
+    }
+
+    public function giveawayCreators()
+    {
+        return $this->hasMany(TournamentParticipant::class,"user_id");
     }
 }

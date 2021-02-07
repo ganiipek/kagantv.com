@@ -18,9 +18,21 @@
 
                 <div class="card-body">
                     @if (session('error_code') == "0")
-                    <p class='login-box-msg' style='color: green'>{{ session('error_description') }}</p>
+                    <div class="alert alert-soft-success fade show" role="alert">
+                        <i class="fa fa-check-circle alert-icon mr-3"></i>
+                        <span>{{ session('error_description') }}</span>
+                        <button type="button" class="close" aria-label="Close" data-dismiss="alert">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
                     @elseif (session('error_code') == "1")
-                    <p class='login-box-msg' style='color: red'>{{ session('error_description') }}</p>
+                    <div class="alert alert-soft-danger fade show" role="alert">
+                        <i class="fa fa-minus-circle alert-icon mr-3"></i>
+                        <span>{{ session('error_description') }}</span>
+                        <button type="button" class="close" aria-label="Close" data-dismiss="alert">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
                     @endif
                     {{ session()->forget(['error_code', 'error_description']) }}
 

@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Database\QueryException;
 
 use Illuminate\Http\Request;
 use App\Models\Team;
@@ -92,7 +93,11 @@ class TeamController extends Controller
         $team = Team::find($request->team_id);
         TeamUser::where(['team_id'=> $request->team_id])->delete();
         TeamInvitation::where(['team_id'=> $request->team_id])->delete();
-        Team::where(['id'=> $request->team_id])->delete();
+        Team::where(['id'=> $request->team_id])
+            ->update([
+                'user_id' => null,
+                'active' => 0
+            ]);
 
         session(['error_code' => "0", "error_description" => $team->name." takımı başarıyla silindi."]);
         return back()->withInput();
@@ -100,6 +105,7 @@ class TeamController extends Controller
 
     public function sendInvitation(Request $request)
     {
+        try{
         $user = User::find($request->user_id);
         $team_user = TeamUser::where(['user_id' => $request->user_id, 'team_id' => $request->team_id])->first();
         $invatition = TeamInvitation::where(['user_id' => $request->user_id, 'team_id' => $request->team_id])->first();
@@ -139,13 +145,18 @@ class TeamController extends Controller
             'created_at' => date("Y.m.d h:i:s", time()),
             'updated_at' => date("Y.m.d h:i:s", time()),
         ]);
-
         return response()->json([
             'error' => false,
             'message' => 'oyuncusuna davet gönderildi!',
             'user' => $user,
             'request' => $request->input()
         ]);
+    }catch(QueryException $exception){
+        return response()->json([
+            'error' => true,
+            'message' => "Hata kodu:".$exception->errorInfo[0]." Hata: ".$exception->errorInfo[2]
+        ]);
+    }
     }
 
     public function acceptInvitation(Request $request)
@@ -159,6 +170,9 @@ class TeamController extends Controller
             return back()->withInput();
         } else if (!Team::where('id', $teamInvatition->team->id)->first()) {
             session(['error_code' => "1", "error_description" => "Takım bulunamadı!"]);
+            return back()->withInput();
+        } else if (TeamUser::where(['team_id' => $teamInvatition->team->id])->count() >= 4){
+            session(['error_code' => "1", "error_description" => "Bir takımda en fazla 4 oyuncu bulunabilir!"]);
             return back()->withInput();
         }
 

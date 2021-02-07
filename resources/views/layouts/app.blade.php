@@ -44,7 +44,6 @@
 
     <div class="u-header-right">
 
-      <!-- Notifications -->
       <div class="dropdown mr-4">
         <a class="link-muted" href="#!" role="button" id="dropdownMenuLink" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
           <span class="h3">
@@ -62,7 +61,6 @@
 
             <div class="card-body p-0">
               <div class="list-group list-group-flush">
-                <!-- Notification -->
                 <a class="list-group-item list-group-item-action" href="#">
                   <div class="media align-items-center">
                     <div class="u-icon u-icon--sm rounded-circle bg-danger text-white mr-3">
@@ -71,7 +69,7 @@
 
                     <div class="media-body">
                       <div class="d-md-flex align-items-center">
-                        <h4 class="mb-1">Dribbble</h4>
+                        <h4 class="mb-1">Takım</h4>
                         <small class="text-muted ml-md-auto">23 Jan 2018</small>
                       </div>
 
@@ -81,9 +79,7 @@
                     </div>
                   </div>
                 </a>
-                <!-- End Notification -->
 
-                <!-- Notification -->
                 <a class="list-group-item list-group-item-action" href="#">
                   <div class="media align-items-center">
                     <div class="u-icon u-icon--sm rounded-circle bg-info text-white mr-3">
@@ -92,7 +88,7 @@
 
                     <div class="media-body">
                       <div class="d-md-flex align-items-center">
-                        <h4 class="mb-1">Twitter</h4>
+                        <h4 class="mb-1">Çekiliş</h4>
                         <small class="text-muted ml-md-auto">18 Jan 2018</small>
                       </div>
 
@@ -102,9 +98,7 @@
                     </div>
                   </div>
                 </a>
-                <!-- End Notification -->
 
-                <!-- Notification -->
                 <a class="list-group-item list-group-item-action" href="#">
                   <div class="media align-items-center">
                     <div class="u-icon u-icon--sm rounded-circle bg-success text-white mr-3">
@@ -113,7 +107,7 @@
 
                     <div class="media-body">
                       <div class="d-md-flex align-items-center">
-                        <h4 class="mb-1">Spotify</h4>
+                        <h4 class="mb-1">Turnuva</h4>
                         <small class="text-muted ml-md-auto">18 Jan 2018</small>
                       </div>
 
@@ -123,9 +117,7 @@
                     </div>
                   </div>
                 </a>
-                <!-- End Notification -->
 
-                <!-- Notification -->
                 <a class="list-group-item list-group-item-action" href="#">
                   <div class="media align-items-center">
                     <div class="u-icon u-icon--sm rounded-circle bg-info text-white mr-3">
@@ -144,7 +136,6 @@
                     </div>
                   </div>
                 </a>
-                <!-- End Notification -->
               </div>
             </div>
 
@@ -154,9 +145,8 @@
           </div>
         </div>
       </div>
-      <!-- End Notifications -->
 
-      <!-- Apps -->
+      <!-- Apps 
       <div class="dropdown mr-4">
         <a class="link-muted" href="#!" role="button" id="dropdownMenuLink" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
           <span class="h3">
@@ -174,59 +164,47 @@
 
             <div class="card-body py-3">
               <div class="row">
-                <!-- App -->
                 <div class="col-4 px-2 mb-2">
                   <a class="u-apps d-flex flex-column rounded" href="#!">
                     <img class="img-fluid u-avatar--xs mx-auto mb-2" src="{{ asset('assets/img/brands-sm/img1.png') }}" alt="">
                     <span class="text-center">Assana</span>
                   </a>
                 </div>
-                <!-- End App -->
 
-                <!-- App -->
                 <div class="col-4 px-2 mb-2">
                   <a class="u-apps d-flex flex-column rounded" href="#!">
                     <img class="img-fluid u-avatar--xs mx-auto mb-2" src="{{ asset('assets/img/brands-sm/img2.png') }}" alt="">
                     <span class="text-center">Slack</span>
                   </a>
                 </div>
-                <!-- End App -->
 
-                <!-- App -->
                 <div class="col-4 px-2 mb-2">
                   <a class="u-apps d-flex flex-column rounded" href="#!">
                     <img class="img-fluid u-avatar--xs mx-auto mb-2" src="{{ asset('assets/img/brands-sm/img3.png') }}" alt="">
                     <span class="text-center">Cloud</span>
                   </a>
                 </div>
-                <!-- End App -->
 
-                <!-- App -->
                 <div class="col-4 px-2">
                   <a class="u-apps d-flex flex-column rounded" href="#!">
                     <img class="img-fluid u-avatar--xs mx-auto mb-2" src="{{ asset('assets/img/brands-sm/img5.png') }}" alt="">
                     <span class="text-center">Facebook</span>
                   </a>
                 </div>
-                <!-- End App -->
 
-                <!-- App -->
                 <div class="col-4 px-2">
                   <a class="u-apps d-flex flex-column rounded" href="#!">
                     <img class="img-fluid u-avatar--xs mx-auto mb-2" src="{{ asset('assets/img/brands-sm/img4.png') }}" alt="">
                     <span class="text-center">Spotify</span>
                   </a>
                 </div>
-                <!-- End App -->
 
-                <!-- App -->
                 <div class="col-4 px-2">
                   <a class="u-apps d-flex flex-column rounded" href="#!">
                     <img class="img-fluid u-avatar--xs mx-auto mb-2" src="{{ asset('assets/img/brands-sm/img6.png') }}" alt="">
                     <span class="text-center">Twitter</span>
                   </a>
                 </div>
-                <!-- End App -->
               </div>
             </div>
 
@@ -236,7 +214,7 @@
           </div>
         </div>
       </div>
-      <!-- End Apps -->
+      End Apps -->
 
       <!-- User Profile -->
       <div class="dropdown ml-2">
@@ -316,8 +294,8 @@
 
             <hr>
 
-            <!-- Start Takım {{ (request()->is('home')) ? 'active' : '' }} -->
-            <li class="u-sidebar-nav-menu__item">
+            <!-- Start Takım  -->
+            <li class="u-sidebar-nav-menu__item  {{ (request()->routeIs('team.create_team','team.team_request','team.joined_team')) ? 'u-sidebar-nav--opened' : '' }}">
               <a class="u-sidebar-nav-menu__link" href="#!" data-target="#Takım">
                 <i class="fas fa-user-friends u-sidebar-nav-menu__item-icon"></i>
                 <span class="u-sidebar-nav-menu__item-title">Takım</span>
@@ -329,13 +307,13 @@
                 <li class="u-sidebar-nav-menu__item">
                   <a class="u-sidebar-nav-menu__link" href="{{ route('team.create_team') }}">
                     <span class="u-sidebar-nav-menu__item-icon">-</span>
-                    <span class="u-sidebar-nav-menu__item-title">Yeni Takım Kur</span>
+                    <span class="u-sidebar-nav-menu__item-title">Yeni Takım Kur </span>
                   </a>
                 </li>
                 <li class="u-sidebar-nav-menu__item">
                   <a class="u-sidebar-nav-menu__link" href="{{ route('team.team_request') }}">
                     <span class="u-sidebar-nav-menu__item-icon">-</span>
-                    <span class="u-sidebar-nav-menu__item-title">Takım İstekleri</span>
+                    <span class="u-sidebar-nav-menu__item-title">Takım İstekleri ({{ $teamInvitations->count() }})</span>
                   </a>
                 </li>
                 <li class="u-sidebar-nav-menu__item">
@@ -358,9 +336,16 @@
               </a>
 
               <ul id="subMenu1" class="u-sidebar-nav-menu u-sidebar-nav-menu--second-level" style="display: none;">
-                <!-- Components -->
+                @if(auth()->user()->admin)
                 <li class="u-sidebar-nav-menu__item">
-                  <a class="u-sidebar-nav-menu__link" href="">
+                  <a class="u-sidebar-nav-menu__link" href="{{ route('giveaway.create_giveaway') }}">
+                    <span class="u-sidebar-nav-menu__item-icon">-</span>
+                    <span class="u-sidebar-nav-menu__item-title">Çekiliş Oluştur</span>
+                  </a>
+                </li>
+                @endif
+                <li class="u-sidebar-nav-menu__item">
+                  <a class="u-sidebar-nav-menu__link" href="{{ route('giveaway.attend_giveaway') }}">
                     <span class="u-sidebar-nav-menu__item-icon">-</span>
                     <span class="u-sidebar-nav-menu__item-title">Çekilişe Katıl</span>
                   </a>
@@ -368,13 +353,7 @@
                 <li class="u-sidebar-nav-menu__item">
                   <a class="u-sidebar-nav-menu__link" href="">
                     <span class="u-sidebar-nav-menu__item-icon">-</span>
-                    <span class="u-sidebar-nav-menu__item-title">Katıldığın Çekilişler</span>
-                  </a>
-                </li>
-                <li class="u-sidebar-nav-menu__item">
-                  <a class="u-sidebar-nav-menu__link" href="">
-                    <span class="u-sidebar-nav-menu__item-icon">-</span>
-                    <span class="u-sidebar-nav-menu__item-title">Tüm Çekilişler</span>
+                    <span class="u-sidebar-nav-menu__item-title">Geçmiş Çekilişler</span>
                   </a>
                 </li>
                 <!-- End Components -->
@@ -406,16 +385,18 @@
                     <span class="u-sidebar-nav-menu__item-title">Turnuvaya Katıl</span>
                   </a>
                 </li>
+                <!-- 
                 <li class="u-sidebar-nav-menu__item">
                   <a class="u-sidebar-nav-menu__link" href="{{ route('tournament.attended_tournament') }}">
                     <span class="u-sidebar-nav-menu__item-icon">-</span>
                     <span class="u-sidebar-nav-menu__item-title">Katıldığın Turnuvalar</span>
                   </a>
                 </li>
+                -->
                 <li class="u-sidebar-nav-menu__item">
                   <a class="u-sidebar-nav-menu__link" href="{{ route('tournament.all_tournament') }}">
                     <span class="u-sidebar-nav-menu__item-icon">-</span>
-                    <span class="u-sidebar-nav-menu__item-title">Tüm Turnuvalar</span>
+                    <span class="u-sidebar-nav-menu__item-title">Geçmiş Turnuvalar</span>
                   </a>
                 </li>
               </ul>
@@ -439,19 +420,13 @@
 
     <div class="u-content">
       {{ $slot }}
-
-
       <!-- Footer -->
       <footer class="u-footer d-md-flex align-items-md-center text-center text-md-left text-muted">
         <small class="text-muted ml-auto">&copy; {{ date("Y") }} <a href="https://kagantv.com">KaganTV</a>. Tüm hakları saklıdır.</small>
       </footer>
     </div>
-
     <!-- End Footer -->
   </main>
-
-
-
   <!-- Plugins -->
   <script src="{{ asset('assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js') }}"></script>
 

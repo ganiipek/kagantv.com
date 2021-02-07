@@ -5,30 +5,25 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Team extends Model
+class TournamentParticipant extends Model
 {
     use HasFactory;
     public $timestamps = false;
 
     protected $guarded = ["id"];
 
-    public function teamUsers()
-    {
-        return $this->hasMany(TeamUser::class);
-    }
-
     public function user()
     {
         return $this->belongsTo(User::class);
     }
 
-    public function teamInvatitions()
+    public function team()
     {
-        return $this->hasMany(TeamInvitation::class);
+        return $this->belongsTo(Team::class);
     }
 
-    public function tournaments()
+    public function tournament()
     {
-        return $this->hasMany(Tournament::class);
+        return $this->belongsTo(Tournament::class);
     }
 }
