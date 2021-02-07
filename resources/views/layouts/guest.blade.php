@@ -79,7 +79,7 @@
                             <a class="nav-link" href="{{ route('contacts') }}">İletişim</a>
                         </li>
                     </ul>
-                    <!--
+                    <!------
                     <div>
                         @if (Auth::check())
                         <a class="btn btn-primary" href="{{ route('dashboard') }}">
